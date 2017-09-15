@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Paper Scissors Rock</title>
+    <!-- Bootstrap Link -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- CSS Reset Link -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- Style CSS LInk -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- Jquery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+
+</head>
+
+
+<body>
+
+
+    <div class="container">
+
+        <!-- Jumbotron-->
+        <div class="jumbotron">
+          <h1 class="text-center"><strong>Rock * Paper * Scissors</strong></h1>
+          <h2 class="text-center">Enter your name to Begin!</h2>
+        </div> <!-- End Jumbotron -->
+
+        
+
+
+        <!-- Player Enter Your Name Section -->
+        <div class="formPanel"> 
+            <form id="name-form">
+                <input type="text" id="name-input" placeholder="Your Name">
+                <input id="add-name" type="submit" value="Submit">
+            </form>
+        </div> <!-- End Player Name Section  -->
+
+        
+
+
+        <!-- Game Data Section -->
+        <div class="panel panel-default">
+            <div class="row"> <!-- Game Data Row -->
+
+                <!-- Player 1 Left Side -->
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="panel panel-default playerPanel" id="playerPanel1">
+                        <div class="panel-heading panelName">
+                            <h3 class="panel-title text-center" id="playerOneName"></h3>
+                        </div>
+
+                        <div class="panel-body panelOption text-center">
+                            <div class="option">Rock</div>
+                        </div>
+
+                        <div class="panel-body panelOption text-center">
+                            <div class="option">Paper</div>
+                        </div>
+
+                        <div class="panel-body panelOption text-center">
+                            <div class="option">Scissors</div>
+                        </div>
+
+
+                        <div class="panel-body panelStats text-center">
+                            <div class="stats" id="player1Stats"></div>
+                        </div>
+                    </div>
+                </div> <!-- End Player 1-->
+                
+                
+
+
+
+
+                <!-- Game Outcome Section -->
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="panel panel-default gamePanel">
+                        <h3 class="panel-title text-center" id="waitingNotice"></h3>
+                        <h3 class="panel-title text-center" id="roundOutcome">Rock Paper  Scissors</h3>
+                    </div>
+                </div> <!-- End Game Outcome Section -->
+                
+                
+
+
+
+
+                <!-- Player 2 Right Side -->
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="panel panel-default playerPanel" id="playerPanel2">
+                        <div class="panel-heading panelName">
+                            <h3 class="panel-title text-center" id="playerTwoName"></h3>
+                        </div>
+
+                        <div class="panel-body panelOption text-center">
+                            <div class="option">Rock</div>
+                        </div>
+
+                        <div class="panel-body panelOption text-center">
+                            <div class="option">Paper</div>
+                        </div>
+
+                        <div class="panel-body panelOption text-center">
+                            <div class="option">Scissors</div>
+                        </div>
+
+
+                        <div class="panel-body panelStats text-center">
+                            <div class="stats" id="player2Stats"></div>
+                        </div>
+                    </div>
+                </div> <!-- End Player 2 Right Side -->
+                
+            </div> <!-- Game Data Row -->
+        </div> <!-- End Game Data Section  -->
+
+
+
+
+
+
+
+
+
+        <!-- Chat Section -->
+        <div class="row">
+
+            <div class="col-lg-8 col-md-8 col-sm-8">
+                <div id="chatDisplay"></div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4"> 
+                <div class="chatInput">
+                    <div class="chatLabel">Type Your Message!</div>
+
+                    <div class="chatPanel"> 
+                        <form id="chat-form">
+                            <textarea type="text" id="chat-input"></textarea>
+                            <input id="chat-send" type="submit" value="Send">
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- End Player Name Section  -->
+
+        </div> <!-- End Chat Section  -->
+
+        
+       
+
+    </div>
+
+
+
+<!-- Javascript File -->
+<script src="app.js"></script>
+</body>
+</html>
